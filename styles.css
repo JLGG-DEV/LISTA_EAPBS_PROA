@@ -14,7 +14,7 @@
   margin: 0 auto;
   background: #fff;
   border: 2px solid #1f3b63;
-  overflow-x: hidden;
+  overflow-x: visible;
   overflow-y: visible;
 }
 
@@ -483,5 +483,250 @@ table {
     width: 100%;
   }
 
+}
+
+@media (max-width: 1024px) {
+  body {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .encabezado {
+    padding: 12px;
+  }
+
+  .titulo-encabezado {
+    font-size: 17px;
+    line-height: 1.3;
+  }
+
+  .logo-img-izq,
+  .logo-img-der {
+    height: 88px;
+  }
+
+  .tabla-datos td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .tabla-datos input,
+  .tabla-datos select {
+    min-height: 42px;
+    font-size: 14px;
+  }
+
+  .seccion-evaluacion,
+  .seccion-resumen,
+  .seccion-resultado {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tabla-evaluacion {
+    min-width: 980px;
+  }
+
+  .tabla-resumen,
+  .tabla-resultado {
+    min-width: 760px;
+  }
+}
+
+@media (max-width: 768px) {
+  .encabezado-logos {
+    gap: 12px;
+  }
+
+  .logo-img-izq,
+  .logo-img-der {
+    height: 64px;
+  }
+
+  .titulo-encabezado {
+    font-size: 14px;
+  }
+
+  .tabla-datos {
+    table-layout: auto;
+  }
+
+  .tabla-datos tr {
+    display: block;
+    border-bottom: 1px solid #d6dce6;
+  }
+
+  .tabla-datos td {
+    display: block;
+    width: 100% !important;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+
+  .tabla-datos td[colspan] {
+    width: 100% !important;
+  }
+
+  .tabla-datos .etiqueta,
+  .tabla-datos .etiqueta-blanca {
+    padding-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .tabla-datos .campo {
+    padding-top: 6px;
+  }
+
+  .tabla-evaluacion th,
+  .tabla-evaluacion td {
+    font-size: 11px;
+    padding: 7px 5px;
+  }
+
+  .seccion-evaluacion {
+    overflow-x: visible;
+  }
+
+  .tabla-evaluacion {
+    table-layout: fixed;
+    min-width: 0;
+  }
+
+  .tabla-evaluacion thead {
+    display: none;
+  }
+
+  .tabla-evaluacion tbody,
+  .tabla-evaluacion tr {
+    display: block;
+  }
+
+  .tabla-evaluacion tr[data-section] {
+    margin: 0 0 10px;
+    border: 1px solid #cfd6df;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .tabla-evaluacion tr[data-section] td {
+    display: block;
+    width: 100% !important;
+    border: none;
+    border-bottom: 1px solid #e6ebf2;
+    padding: 8px 10px;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.35;
+  }
+
+  .tabla-evaluacion tr[data-section] td:last-child {
+    border-bottom: none;
+  }
+
+  .tabla-evaluacion tr[data-section] td::before {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #163962;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+
+  .tabla-evaluacion tr[data-section] td:nth-child(1)::before {
+    content: "Item";
+  }
+
+  .tabla-evaluacion tr[data-section] td:nth-child(2)::before {
+    content: "Item a evaluar";
+  }
+
+  .tabla-evaluacion tr[data-section] td:nth-child(3)::before {
+    content: "Ponderacion";
+  }
+
+  .tabla-evaluacion tr[data-section] td:nth-child(4)::before {
+    content: "Puntaje";
+  }
+
+  .tabla-evaluacion tr[data-section] td:nth-child(5)::before {
+    content: "Puntaje obtenido";
+  }
+
+  .tabla-evaluacion tr[data-section] td:nth-child(6)::before {
+    content: "Observaciones";
+  }
+
+  .tabla-evaluacion .fila-total td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .tabla-evaluacion .fila-subtitulo {
+    display: grid !important;
+    grid-template-columns: 64px 1fr;
+    margin: 0 0 10px;
+    border: 1px solid #cfd6df;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f4f6fa;
+  }
+
+  .tabla-evaluacion .fila-subtitulo td {
+    display: flex !important;
+    align-items: center;
+    width: 100% !important;
+    border: none;
+    padding: 10px 10px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .tabla-evaluacion .fila-subtitulo td:first-child {
+    justify-content: center;
+    background: #e3e8f1;
+    border-right: 1px solid #cfd6df;
+    font-size: 12px;
+  }
+
+  .tabla-evaluacion .fila-subtitulo td:last-child {
+    background: #f4f6fa;
+    font-size: 12px;
+  }
+
+  .tabla-evaluacion .fila-total td {
+    border-left: none;
+    border-right: none;
+  }
+
+  .tabla-evaluacion .fila-total .valor-total {
+    text-align: center;
+  }
+
+  .tabla-evaluacion .estado-cumplimiento,
+  .observacion-input {
+    font-size: 11px;
+  }
+
+  .tabla-resumen,
+  .tabla-resultado {
+    min-width: 0;
+  }
+
+  .tabla-resumen th,
+  .tabla-resumen td,
+  .tabla-resultado th,
+  .tabla-resultado td {
+    font-size: 12px;
+  }
+
+  .boton-enviar {
+    width: calc(100% - 24px);
+    max-width: 320px;
+  }
 }
 
